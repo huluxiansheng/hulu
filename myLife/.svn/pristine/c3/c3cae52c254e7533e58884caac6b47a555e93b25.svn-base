@@ -1,0 +1,10 @@
+/**
+ * 注册页面
+ */
+$(function(){
+	$("#sendV").click(function(){
+		$.post(contextPath+"/toSendVerifictionCode.life",{"uEmail":$("input[name='uEmail'").val()});
+		
+	});
+	
+});

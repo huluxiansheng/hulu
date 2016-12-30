@@ -1,0 +1,7 @@
+
+mail.smtp.host = smtp.qq.com
+mail.smtp.port = 587
+mail.smtp.auth = true
+mail.smtp.starttls.enable = true
+mail.sender.userName = 719958760@qq.com
+mail.sender.password = xptqbungrqnpbcif

@@ -1,0 +1,15 @@
+/**
+ * 注册页面
+ */
+$(function(){
+	$("#sendV").click(function(){
+		$.post(contextPath+"/toSendVerifictionCode.life",{"uEmail":$("input[name='uEmail'").val()});
+		setInterval(callback, delay)
+	});
+	
+});
+
+function changTimeText(){
+	var defaultTime = 60;
+	$("#sendV").text("");
+}

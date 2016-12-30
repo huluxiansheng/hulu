@@ -1,0 +1,12 @@
+package com.myLife.system.security.service;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.myLife.system.security.entity.User;
+
+public interface IRegisterService {
+
+	public String sendEmail(String uEmail, HttpServletRequest request);
+	
+	public String addUser(User user, String vNumber, HttpServletRequest request);
+}

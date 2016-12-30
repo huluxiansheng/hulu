@@ -1,0 +1,50 @@
+package com.myLife.tools;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.SQLException;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.myLife.system.constants.Constants;
+import com.myLife.system.security.entity.User;
+import com.p6spy.engine.sample.P6SampleConnection;
+import com.p6spy.engine.spy.P6DataSource;
+
+public class SystemUtil {
+
+	/**
+	 * ÅÐ¶ÏÊÇ·ñµÇÂ½
+	 * @param requset
+	 * @return
+	 */
+	public static boolean isLogin(HttpServletRequest requset){
+		if(requset.getSession().getAttribute(Constants.SESSION_USER_KEY) == null){
+			return false;
+		}
+		return true;
+	}
+	
+	
+	
+	public static void main(String[] args){
+		
+		
+//		ApplicationContext act = new FileSystemXmlApplicationContext("classpath:config/applicationContext.xml");
+//		SqlSessionFactory ps = (SqlSessionFactory) act.getBean("sqlSessionFactory");
+//		SqlSession s = ps.openSession();
+//		User user = s.selectOne("com.myLife.system.security.dao.IUserDao.findById",1);
+//		System.out.println(user.getuName());
+	}
+}

@@ -1,0 +1,71 @@
+package com.myLife.system.component.email;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Date;
+import java.util.Properties;
+
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class JavaMail {
+	
+	private MimeMessage message;
+	
+	private Session session;
+	
+	private Transport transport;
+	
+	private String mailHost;
+	
+	private String mailPort;
+	
+	private String userName;
+	
+	private String password;
+	
+	
+	
+	public JavaMail(boolean debug){
+		Properties prop = new Properties();
+		try {
+			InputStream in = this.getClass().getResourceAsStream("../../../../../config/javamail.properties");
+			prop.load(in);
+			this.userName = prop.getProperty("mail.sender.userName");
+			this.password = prop.getProperty("mail.sender.password");
+		} catch (IOException e) {
+			e.printStackTrace();
+		};
+		session = Session.getInstance(prop, new MyAuthenticator(userName, password));
+		session.setDebug(debug);
+		message = new MimeMessage(session);
+	}
+	
+	public void doSendMail(String subject, String sendHtml, String receiveUser){
+		
+		try {
+			Address fromAddress = new InternetAddress(this.userName);
+			Address toAddress = new InternetAddress(receiveUser);
+			message.setFrom(fromAddress);
+			message.setSubject(subject);
+			message.setText(sendHtml);
+			message.setSentDate(new Date());
+			message.addRecipient(Message.RecipientType.TO, toAddress);
+			Transport.send(message);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args){
+		
+		JavaMail jm = new JavaMail(true);
+		jm.doSendMail("≤‚ ‘", "∫˙∫Ï—Ù", "2407414436@qq.com");
+		
+		
+	}
+}

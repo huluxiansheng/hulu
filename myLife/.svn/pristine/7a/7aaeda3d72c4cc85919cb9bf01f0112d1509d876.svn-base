@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.myLife.system.security.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.portlet.ModelAndView;
+
+/**
+ * 注册控制器
+ * @author HuYang 
+ * @date 2016年8月1日 下午3:21:00
+ */
+@Controller
+public class RegisterController {
+
+	@RequestMapping("/toRegisterPage")
+	public String toRegisterPage(){
+		return "security/register";
+	}
+	
+}

@@ -1,0 +1,24 @@
+package com.myLife.core.dao;
+
+import java.io.Serializable;
+import java.util.List;
+
+public interface ICoreDao<T,PK extends Serializable> {
+
+	public T findById(PK id);
+	
+	public List<T> findList();
+	
+	public List<T> findAll();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
