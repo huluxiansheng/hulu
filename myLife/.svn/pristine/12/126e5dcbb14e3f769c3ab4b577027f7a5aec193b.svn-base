@@ -1,8 +1,0 @@
-package com.myLife.system.security.service;
-
-import javax.servlet.http.HttpServletRequest;
-
-public interface IRegisterService {
-
-	public String sendEmail(String uEmail, HttpServletRequest request);
-}
