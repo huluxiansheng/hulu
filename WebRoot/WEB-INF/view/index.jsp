@@ -3,31 +3,64 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>从热爱生活开始</title>
+
+<script type="application/javascript">
+	
+	$(function(){
+		$('.selectpicker').selectpicker({
+			style: "btn-default",
+			size: 4,
+			width: 80
+		});
+	});
+
+</script>
+
 </head>
 <body>
 	
-	
-	
-	
 	<div class="container">
+		
+		
 		<div class="jumbotron">
-			<h1>欢迎登陆页面！</h1>
-			<p>这是一个超大屏幕（Jumbotron）的实例。${user.userName }===${user.userEmail }</p>
-			<p><a class="btn btn-primary btn-lg" role="button">学习更多</a>
-			</p>
-			<p> SESSION：${session}  </p>
+			<form action="${ctx}/d">
+				<div class="row">
+					<div class="col-xs-4 text-right">
+						<select class="selectpicker">
+							<option value="">类型</option>
+							<option value="1">早餐</option>
+							<option value="2">午餐</option>
+							<option value="3">晚餐</option>
+						</select>
+					</div>
+					<div class="col-xs-4">
+						<div class="input-group">
+							<span class="input-group-addon">￥</span>
+							<input type="text" class="form-control" />
+						</div>
+					</div>
+					<div class="col-xs-4 text-left">
+						<div class="btn-group">
+							<button type="submit" class="btn btn-default">
+								计入
+								<span class="glyphicon glyphicon-pencil"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
+
 	</div>
 	
 	
-	<div class="container">
 	
-	
-	</div>
 </body>
 </html>
