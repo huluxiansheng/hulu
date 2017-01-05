@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,8 +14,11 @@
 <script type="application/javascript">
 	
 	$(function(){
-			
-		
+		$('.selectpicker').selectpicker({
+			style: "btn-default",
+			size: 4,
+			width: 80
+		});
 	});
 
 </script>
@@ -25,31 +30,28 @@
 		
 		
 		<div class="jumbotron">
-			<form action="">
+			<form action="${ctx}/d">
 				<div class="row">
 					<div class="col-xs-4 text-right">
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" id="menuBtn" data-toggle="dropdown">
-								类型
-								<span class="caret"></span>
-							</button>			
-							<ul class="dropdown-menu" role="menu">
-								<li role="presentation">
-									<a role="menuitem" href="#">早餐</a>
-								</li>
-								<li role="presentation">
-									<a role="menuitem" href="#">午餐</a>
-								</li>
-								<li role="presentation">
-									<a role="menuitem" href="#">晚餐</a>
-								</li>
-							</ul>
-						</div>
+						<select class="selectpicker">
+							<option value="">类型</option>
+							<option value="1">早餐</option>
+							<option value="2">午餐</option>
+							<option value="3">晚餐</option>
+						</select>
 					</div>
-					<div class="col-xs-7">
+					<div class="col-xs-4">
 						<div class="input-group">
 							<span class="input-group-addon">￥</span>
 							<input type="text" class="form-control" />
+						</div>
+					</div>
+					<div class="col-xs-4 text-left">
+						<div class="btn-group">
+							<button type="submit" class="btn btn-default">
+								计入
+								<span class="glyphicon glyphicon-pencil"></span>
+							</button>
 						</div>
 					</div>
 				</div>
