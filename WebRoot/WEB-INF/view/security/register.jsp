@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>注册页面</title>
 <script type="text/javascript" src="<%=contextPath %>/assets/js/viewJS/security/register.js"></script>
 </head>

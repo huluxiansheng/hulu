@@ -95,7 +95,7 @@
 	-->
 	
 	<!-- 数据库配置（主）driud -->
-	<bean id="masterDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+	<bean id="masterDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init">
 		<property name="driverClassName">
 			<value>${jdbc.master.driverClassName}</value>
 		</property>
@@ -132,7 +132,7 @@
 	</bean>
 	
 	<!-- 数据库配置（从）driud -->
-	<bean id="slaveDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+	<bean id="slaveDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init">
 		<property name="driverClassName">
 			<value>${jdbc.slave.driverClassName}</value>
 		</property>
