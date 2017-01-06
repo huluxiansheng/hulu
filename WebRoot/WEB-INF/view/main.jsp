@@ -22,13 +22,9 @@
 	});
 
 </script>
-
 </head>
 <body>
-	
 	<div class="container">
-		
-		
 		<div class="jumbotron">
 			<form action="${ctx}/d">
 				<div class="row">
@@ -57,10 +53,6 @@
 				</div>
 			</form>
 		</div>
-
 	</div>
-	
-	
-	
 </body>
 </html>

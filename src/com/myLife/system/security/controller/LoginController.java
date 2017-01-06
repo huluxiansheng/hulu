@@ -25,8 +25,8 @@ public class LoginController {
 	@Autowired
 	private IUserDao userDao;
 	
-	@RequestMapping("/index")
-	public Map<String, Object> index(HttpServletRequest request){
+	@RequestMapping("/main")
+	public ModelAndView index(HttpServletRequest request){
 		System.out.println("已经通过");
 		request.getSession().setAttribute("userName", "逗你玩");
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -35,8 +35,8 @@ public class LoginController {
 		User user = userDao.findById(1);
 		map.put("user", user);
 		map.put("session", request.getSession().getAttribute("userName"));
-		ModelAndView model = new ModelAndView("index",map);
-		return map;
+		ModelAndView model = new ModelAndView("main",map);
+		return model;
 	} 
 	
 	/**
