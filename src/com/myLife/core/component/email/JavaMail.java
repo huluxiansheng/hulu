@@ -1,4 +1,4 @@
-package com.myLife.system.component.email;
+package com.myLife.core.component.email;
 
 import java.io.IOException;
 import java.io.InputStream;
