@@ -1,4 +1,4 @@
-package com.myLife.core.dao;
+package com.myLife.core.base.dao;
 
 import java.io.Serializable;
 

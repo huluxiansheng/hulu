@@ -1,4 +1,4 @@
-package com.myLife.core.service;
+package com.myLife.core.base.service;
 
 import java.io.Serializable;
 import java.util.List;

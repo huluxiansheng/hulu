@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
 
-import com.myLife.core.dao.ICoreDao;
+import com.myLife.core.base.dao.ICoreDao;
 import com.myLife.system.security.entity.User;
 
 /**

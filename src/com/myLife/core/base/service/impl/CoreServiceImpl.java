@@ -1,10 +1,10 @@
-package com.myLife.core.service.impl;
+package com.myLife.core.base.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.myLife.core.dao.ICoreDao;
-import com.myLife.core.service.ICoreService;
+import com.myLife.core.base.dao.ICoreDao;
+import com.myLife.core.base.service.ICoreService;
 
 /**
  * @author HuYang 

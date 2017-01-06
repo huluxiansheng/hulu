@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.myLife.core.base.dao.ICoreDao;
+import com.myLife.core.base.service.impl.CoreServiceImpl;
 import com.myLife.core.component.email.JavaMail;
-import com.myLife.core.dao.ICoreDao;
-import com.myLife.core.service.impl.CoreServiceImpl;
 import com.myLife.system.security.dao.IUserDao;
 import com.myLife.system.security.entity.User;
 import com.myLife.system.security.service.IRegisterService;

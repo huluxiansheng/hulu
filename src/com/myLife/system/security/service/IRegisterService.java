@@ -3,7 +3,7 @@ package com.myLife.system.security.service;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.myLife.core.service.ICoreService;
+import com.myLife.core.base.service.ICoreService;
 import com.myLife.system.security.entity.User;
 
 public interface IRegisterService extends ICoreService<User, String> {

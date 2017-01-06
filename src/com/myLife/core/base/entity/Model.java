@@ -1,4 +1,4 @@
-package com.myLife.core.entity;
+package com.myLife.core.base.entity;
 
 /**
  * ¹«¹²
