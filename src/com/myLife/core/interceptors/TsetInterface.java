@@ -24,7 +24,6 @@ public class TsetInterface implements HandlerInterceptor {
  
 	@Override
 	public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2) throws Exception {
-		System.out.println("testInterface");
 		// TODO Auto-generated method stub
 		return true;
 	}

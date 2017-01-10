@@ -15,7 +15,7 @@ public class CoreInterface implements HandlerInterceptor {
 	public void afterCompletion(HttpServletRequest request,
 			HttpServletResponse response, Object object, Exception e)
 			throws Exception {
-		System.out.println("after 呵呵呵");
+		System.out.println("页面已解析完毕");
 		// TODO Auto-generated method stub
 
 	}
@@ -24,7 +24,7 @@ public class CoreInterface implements HandlerInterceptor {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response,
 			Object object, ModelAndView mv) throws Exception {
-		System.out.println("post 呵呵呵呵");
+		System.out.println("post访问，页面视图解析前");
 		// TODO Auto-generated method stub
 
 	}
@@ -35,9 +35,9 @@ public class CoreInterface implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
 			Object object) throws Exception {
-		String ctx = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/";
-		String url = request.getRequestURL().toString();
-		System.out.println(url);
+//		String ctx = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/";
+//		String url = request.getRequestURL().toString();
+		System.out.println("访问前端拦截");
 		if(SystemUtil.isLogin(request)){
 			return true;
 		}else{
