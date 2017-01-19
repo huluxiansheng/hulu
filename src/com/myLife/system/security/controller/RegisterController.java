@@ -95,6 +95,24 @@ public class RegisterController {
 		return "security/registSuccess";
 	}
 	
+	@RequestMapping("/putSession")
+	public @ResponseBody Map<String, Object> putSession(HttpServletRequest request){
+		String test = request.getParameter("test");
+		request.getSession().setAttribute("testSession", test);
+		request.getSession().setMaxInactiveInterval(300);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("testSession", test);
+		return map;
+	}
+	
+	@RequestMapping("/getSession")
+	public @ResponseBody Map<String, Object> getSession(HttpServletRequest request){
+		String test = (String) request.getSession().getAttribute("testSession");
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("testSession", test);
+		return map;
+	}
+	
 	
 	
 	

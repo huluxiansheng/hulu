@@ -56,6 +56,13 @@
 				</div>
 			</form>
 			<button class="btn btn-default" id="queryList">查询列表</button>
+			<button class="btn btn-default" id="queryList1">查询列表-) session</button>
+			<button class="btn btn-default" id="queryList2">查询列表(- seesion</button>
+			<input type="text" name="test" id="test"/>
+			<br/>
+			<%=request.getSession().getId() %>
+			<%=request.getSession().getMaxInactiveInterval() %>
+			<%=request.getSession().getLastAccessedTime() %>
 			<table id="table">
 				
 			</table>
