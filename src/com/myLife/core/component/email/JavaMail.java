@@ -4,18 +4,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
 import java.util.Properties;
-import java.util.ResourceBundle;
 
 import javax.mail.Address;
-import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -31,9 +27,9 @@ public class JavaMail {
 	/** 邮件环境配置对象 **/
 	private Session session;
 	/** 邮件服务器地址 **/
-	private String mailHost;
+//	private String mailHost;
 	/** 邮件服务器端口 **/
-	private String mailPort;
+//	private String mailPort;
 	/** 邮件服务器账号 **/
 	private String userName;
 	/** 邮件服务器密码 **/
