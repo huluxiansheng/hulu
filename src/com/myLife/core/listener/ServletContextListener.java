@@ -16,7 +16,7 @@ public class ServletContextListener implements javax.servlet.ServletContextListe
 	public void contextInitialized(ServletContextEvent sce) {
 		ServletContext sc = sce.getServletContext();
 		SessionCookieConfig scc = sc.getSessionCookieConfig();
-		scc.setPath("/");
+//		scc.setPath("/");
 		scc.setName("MYLIFEID");
 		scc.setSecure(false);
 		
