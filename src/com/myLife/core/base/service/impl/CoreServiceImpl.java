@@ -54,4 +54,5 @@ public abstract class CoreServiceImpl<T, PK extends Serializable> implements ICo
 		return 0;
 	}
 
+
 }
