@@ -5,9 +5,10 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.myLife.system.security.dao.IUserDao;
 import com.myLife.system.security.entity.User;
@@ -17,12 +18,14 @@ import com.myLife.system.security.entity.User;
  * @author HuYang
  * @date 2017年5月4日 下午8:56:11
  */
-@Controller("/inputMoney")
-public class InputMoney {
+@Controller
+@RequestMapping("/main")
+public class MainController {
 
+	@Autowired
 	private IUserDao userDao;
 	
-	@RequestMapping("/main")
+	@RequestMapping("/toMain")
 	public ModelAndView index(HttpServletRequest request){
 		System.out.println("已经通过");
 		request.getSession().setAttribute("userName", "逗你玩");
@@ -32,7 +35,7 @@ public class InputMoney {
 		User user = userDao.findById(1);
 		map.put("user", user);
 		map.put("session", request.getSession().getAttribute("userName"));
-		ModelAndView model = new ModelAndView("main",map);
+		ModelAndView model = new ModelAndView("/main",map);
 		return model;
 	} 
 }

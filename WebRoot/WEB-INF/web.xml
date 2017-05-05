@@ -60,7 +60,7 @@
 <!-- 错误页面配置 -->
   <error-page>
   	<error-code>404</error-code>
-  	<location>/WEB-INF/errorPage/404.jsp</location>
+  	<location>/WEB-INF/view/errorPage/404.jsp</location>
   </error-page>
   
   
