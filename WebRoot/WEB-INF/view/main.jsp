@@ -20,7 +20,6 @@
 			width: 80
 		});
 	});
-
 </script>
 </head>
 <body>
@@ -29,7 +28,7 @@
 			<form action="${ctx}/d">
 				<div class="row">
 					<div class="col-xs-4 text-right">
-						<select class="selectpicker">
+						<select class="selectpicker" name="">
 							<option value="">类型</option>
 							<option value="1">早餐</option>
 							<option value="2">午餐</option>
