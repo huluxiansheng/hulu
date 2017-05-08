@@ -16,7 +16,7 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<form action="${ctx }/main/insertSpend.life" method="post">
+			<form action="${ctx }/main/insertSpend.life" method="post" id="formId">
 				<div class="row">
 					<div class="col-xs-4 text-right">
 						<select class="selectpicker" name="typeId">
@@ -34,7 +34,7 @@
 					</div>
 					<div class="col-xs-4 text-left">
 						<div class="btn-group">
-							<button type="submit" class="btn btn-default" id="addMoney">
+							<button type="button" class="btn btn-default" id="addMoney">
 								计入
 								<span class="glyphicon glyphicon-pencil"></span>
 							</button>

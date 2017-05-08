@@ -12,6 +12,7 @@
 <script type="text/javascript" src="<%=contextPath %>/assets/js/common/jquery-1.12.4.min.js" ></script>
 <script type="text/javascript" src="<%=contextPath %>/assets/js/common/bootstrap.min.js" ></script>
 <script type="text/javascript" src="<%=contextPath %>/assets/js/common/bootstrap-table.min.js" ></script>
+<script type="text/javascript" src="<%=contextPath %>/assets/js/common/jquery-serializeObject.js" ></script>
 
 <!-- CSS 部分 -->
 <link rel="stylesheet" type="text/css" href="<%=contextPath %>/assets/css/bootstrap.min.css" />
