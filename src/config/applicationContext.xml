@@ -186,13 +186,13 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="masterDataSource" />
       <property name="configLocation" value="classpath:config/mybatis-config.xml" />
-      <property name="mapperLocations" value="classpath:com/myLife/**/entity/sqlMap/**.xml" />
+      <property name="mapperLocations" value="classpath:com/myLife/**/dao/mapper/**.xml" />
     </bean>
     
     <!-- 扫描mybatis映射接口类 -->  
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-	   <property name="basePackage" value="com.myLife.**.dao"/>  
-	   <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>  
+      <property name="basePackage" value="com.myLife.**.dao"/>  
+      <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>  
 	</bean>  
 
 	

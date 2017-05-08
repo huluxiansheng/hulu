@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.myLife.core.base.dao.ICoreDao;
 import com.myLife.core.base.service.ICoreService;
+import com.myLife.system.security.dao.model.User;
 
 /**
  * @author HuYang 
@@ -20,39 +21,48 @@ public abstract class CoreServiceImpl<T, PK extends Serializable> implements ICo
 	 */
 	abstract protected ICoreDao<T, PK> getDao();
 
-	/* (non-Javadoc)
-	 * @see com.myLife.core.service.ICoreService#selectEntitys(java.lang.Object)
-	 */
 	@Override
-	public List<T> selectEntitys(T o) {
-		return getDao().findList(o);
-	}
-
-	/* (non-Javadoc)
-	 * @see com.myLife.core.service.ICoreService#updateEntity(java.lang.Object)
-	 */
-	@Override
-	public int updateEntity(T o) {
+	public int deleteByPrimaryKey(PK entityId) {
 		// TODO Auto-generated method stub
-		return 0;
+		return getDao().deleteByPrimaryKey(entityId);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.myLife.core.service.ICoreService#deleteById(java.io.Serializable)
-	 */
 	@Override
-	public int deleteById(int id) {
-		return getDao().deleteById(id);
-	}
-
-	/* (non-Javadoc)
-	 * @see com.myLife.core.service.ICoreService#addEntity(java.lang.Object)
-	 */
-	@Override
-	public int addEntity(T o) {
+	public int insert(T record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return getDao().insert(record);
 	}
+
+	@Override
+	public int insertSelective(T record) {
+		// TODO Auto-generated method stub
+		return getDao().insertSelective(record);
+	}
+
+	@Override
+	public T selectByPrimaryKey(PK entityId) {
+		// TODO Auto-generated method stub
+		return getDao().selectByPrimaryKey(entityId);
+	}
+
+	@Override
+	public int updateByPrimaryKeySelective(T record) {
+		// TODO Auto-generated method stub
+		return getDao().updateByPrimaryKeySelective(record);
+	}
+
+	@Override
+	public int updateByPrimaryKey(T record) {
+		// TODO Auto-generated method stub
+		return getDao().updateByPrimaryKey(record);
+	}
+
+	@Override
+	public List<T> selectEntityListByRecord(T record) {
+		// TODO Auto-generated method stub
+		return getDao().selectEntityListByRecord(record);
+	}
+	
 
 
 }

@@ -1,4 +1,4 @@
-package com.myLife.system.security.entity;
+package com.myLife.system.security.dao.model;
 
 import java.sql.Timestamp;
 /**
@@ -31,7 +31,7 @@ public class User {
 	/**
 	 * 用户密码
 	 */
-	private String userPassword;
+	private String userPass;
 	/**
 	 * 用户真实姓名
 	 */
@@ -39,7 +39,7 @@ public class User {
 	/**
 	 * 用户创建时间
 	 */
-	private Timestamp userCreateTime;
+	private Timestamp createTime;
 	
 	/**
 	 * 获取用户ID
@@ -147,18 +147,18 @@ public class User {
 	 * @author HuYang
 	 * @date 2016年11月8日 下午3:17:15
 	 */
-	public String getUserPassword() {
-		return userPassword;
+	public String getUserPass() {
+		return userPass;
 	}
 	
 	/**
 	 * 设置用户密码
-	 * @param userPassword 
+	 * @param userPass 
 	 * @author HuYang
 	 * @date 2016年11月8日 下午3:17:32
 	 */
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
 	}
 	
 	/**
@@ -187,18 +187,18 @@ public class User {
 	 * @author HuYang
 	 * @date 2016年11月8日 下午3:18:10
 	 */
-	public Timestamp getUserCreateTime() {
-		return userCreateTime;
+	public Timestamp getCreateTime() {
+		return createTime;
 	}
 	
 	/**
 	 * 设置创建时间
-	 * @param userCreateTime 
+	 * @param createTime 
 	 * @author HuYang
 	 * @date 2016年11月8日 下午3:18:23
 	 */
-	public void setUserCreateTime(Timestamp userCreateTime) {
-		this.userCreateTime = userCreateTime;
+	public void setCreateTime(Timestamp createTime) {
+		this.createTime = createTime;
 	}
 	
 	

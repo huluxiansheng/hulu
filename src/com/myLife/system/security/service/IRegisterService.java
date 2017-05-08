@@ -4,9 +4,9 @@ package com.myLife.system.security.service;
 import javax.servlet.http.HttpServletRequest;
 
 import com.myLife.core.base.service.ICoreService;
-import com.myLife.system.security.entity.User;
+import com.myLife.system.security.dao.model.User;
 
-public interface IRegisterService extends ICoreService<User, String> {
+public interface IRegisterService extends ICoreService<User, Integer> {
 
 	/**
 	 * ·¢ËÍÑéÖ¤Âë

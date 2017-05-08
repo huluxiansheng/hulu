@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.myLife.system.security.entity.User;
+import com.myLife.system.security.dao.model.User;
 import com.myLife.system.security.service.IRegisterService;
 
 
@@ -79,7 +79,7 @@ public class RegisterController {
 	 */
 	@RequestMapping("/findUserList")
 	public @ResponseBody List<User> findUserList(User user){
-		List<User> uL= this.registService.selectEntitys(user);
+		List<User> uL= this.registService.selectEntityListByRecord(user);
 		return uL;
 	}
 	
@@ -91,7 +91,7 @@ public class RegisterController {
 	 */
 	@RequestMapping("/deleteUser")
 	public String deleteUser(int userId){
-		registService.deleteById(userId);
+		registService.deleteByPrimaryKey(userId);
 		return "security/registSuccess";
 	}
 	

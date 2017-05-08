@@ -9,19 +9,19 @@ import org.springframework.stereotype.Service;
 import com.myLife.core.base.dao.ICoreDao;
 import com.myLife.core.base.service.impl.CoreServiceImpl;
 import com.myLife.core.component.email.JavaMail;
-import com.myLife.system.security.dao.IUserDao;
-import com.myLife.system.security.entity.User;
+import com.myLife.system.security.dao.UserMapper;
+import com.myLife.system.security.dao.model.User;
 import com.myLife.system.security.service.IRegisterService;
 import com.myLife.tools.EncryptionTool;
 import com.myLife.tools.SystemUtil;
 
 @Service
-public class RegisterServiceImpl extends CoreServiceImpl<User, String> implements IRegisterService {
+public class RegisterServiceImpl extends CoreServiceImpl<User, Integer> implements IRegisterService {
 	
 	@Autowired
 	private JavaMail jm;
 	@Autowired
-	private IUserDao userDao;
+	private UserMapper userDao;
 	
 	@Override
 	public String sendEmail(String userEmail, HttpServletRequest request) {
@@ -51,7 +51,7 @@ public class RegisterServiceImpl extends CoreServiceImpl<User, String> implement
 		if(vnum2 == null || !vnum2.equals(vnum1)){
 			return "ÑéÖ¤Âë´íÎó£¡";
 		}
-		user.setUserPassword(EncryptionTool.MD5(user.getUserPassword()));
+		user.setUserPass(EncryptionTool.MD5(user.getUserPass()));
 		userDao.insert(user);
 		return null;
 	}

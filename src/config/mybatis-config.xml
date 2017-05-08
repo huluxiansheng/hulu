@@ -17,7 +17,11 @@
 	    <setting name="jdbcTypeForNull" value="OTHER"/>
 	    <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
 	</settings>
+<!-- 	<typeAliases> -->
+<!-- 		<typeAlias type="com.myLife.system.security.dao.model.User" alias="User" /> -->
+<!-- 	</typeAliases> -->
 	<typeAliases>
-		<typeAlias type="com.myLife.system.security.entity.User" alias="User" />
+		<package name="com.myLife.system.security.dao.model"/>
+		<package name="com.myLife.business.module.collect.model"/>
 	</typeAliases>
 </configuration>

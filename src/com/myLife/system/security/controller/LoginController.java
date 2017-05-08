@@ -11,8 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.ModelAndView;
 
-import com.myLife.system.security.dao.IUserDao;
-import com.myLife.system.security.entity.User;
+import com.myLife.system.security.dao.UserMapper;
+import com.myLife.system.security.dao.model.User;
 
 /**
  * µÇÂ½¿ØÖÆÆ÷
@@ -23,7 +23,7 @@ import com.myLife.system.security.entity.User;
 public class LoginController {
 	
 	@Autowired
-	private IUserDao userDao;
+	private UserMapper userDao;
 	
 
 	
@@ -35,7 +35,7 @@ public class LoginController {
 	@RequestMapping("/toLogin")
 	public ModelAndView toLogin(User user){
 		
-		List<User> userList = userDao.findList(user);
+		User userList = userDao.selectByPrimaryKey(1);
 		
 		return new ModelAndView();
 	}
