@@ -62,7 +62,7 @@ public abstract class CoreServiceImpl<T, PK extends Serializable> implements ICo
 		// TODO Auto-generated method stub
 		return getDao().selectEntityListByRecord(record);
 	}
-	
+
 
 
 }

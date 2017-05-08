@@ -22,6 +22,7 @@
 <!-- 	</typeAliases> -->
 	<typeAliases>
 		<package name="com.myLife.system.security.dao.model"/>
-		<package name="com.myLife.business.module.collect.model"/>
+		<package name="com.myLife.business.module.collect.dao.model"/>
+		<package name="com.myLife.business.module.base.dao.model"/>
 	</typeAliases>
 </configuration>

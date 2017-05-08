@@ -30,15 +30,15 @@
 					<div class="col-xs-4 text-right">
 						<select class="selectpicker" name="">
 							<option value="">类型</option>
-							<option value="1">早餐</option>
-							<option value="2">午餐</option>
-							<option value="3">晚餐</option>
+							<c:forEach items="${mtList }" var="v">
+								<option value="${v.typeId }">${v.typeName }</option>
+							</c:forEach>
 						</select>
 					</div>
 					<div class="col-xs-4">
 						<div class="input-group">
 							<span class="input-group-addon">￥</span>
-							<input type="text" class="form-control" />
+							<input type="text" class="form-control" name=""/>
 						</div>
 					</div>
 					<div class="col-xs-4 text-left">

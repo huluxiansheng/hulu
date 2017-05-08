@@ -22,4 +22,5 @@ public interface ICoreService<T, PK extends Serializable> {
    public int updateByPrimaryKey(T record);
 	
    public List<T> selectEntityListByRecord(T record);
+   
 }
