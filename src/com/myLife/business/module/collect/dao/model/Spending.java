@@ -2,6 +2,8 @@ package com.myLife.business.module.collect.dao.model;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Spending {
     private Integer spendId;
 
@@ -15,6 +17,7 @@ public class Spending {
 
     private Integer userId;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     public Integer getSpendId() {

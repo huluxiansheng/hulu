@@ -11,24 +11,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>从热爱生活开始</title>
 
-<script type="application/javascript">
-	
-	$(function(){
-		$('.selectpicker').selectpicker({
-			style: "btn-default",
-			size: 4,
-			width: 80
-		});
-	});
-</script>
+<script type="application/javascript" src="${ctx }/assets/js/viewJS/main/main.js" ></script>
 </head>
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<form action="${ctx}/d">
+			<form action="${ctx }/main/insertSpend.life" method="post">
 				<div class="row">
 					<div class="col-xs-4 text-right">
-						<select class="selectpicker" name="">
+						<select class="selectpicker" name="typeId">
 							<option value="">类型</option>
 							<c:forEach items="${mtList }" var="v">
 								<option value="${v.typeId }">${v.typeName }</option>
@@ -38,12 +29,12 @@
 					<div class="col-xs-4">
 						<div class="input-group">
 							<span class="input-group-addon">￥</span>
-							<input type="text" class="form-control" name=""/>
+							<input type="text" class="form-control" name="spendMoney"/>
 						</div>
 					</div>
 					<div class="col-xs-4 text-left">
 						<div class="btn-group">
-							<button type="submit" class="btn btn-default">
+							<button type="submit" class="btn btn-default" id="addMoney">
 								计入
 								<span class="glyphicon glyphicon-pencil"></span>
 							</button>

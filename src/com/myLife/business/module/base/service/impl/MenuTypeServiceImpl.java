@@ -1,6 +1,7 @@
 package com.myLife.business.module.base.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.myLife.business.module.base.dao.MenuTypeMapper;
 import com.myLife.business.module.base.dao.model.MenuType;
@@ -8,6 +9,7 @@ import com.myLife.business.module.base.service.IMenuTypeService;
 import com.myLife.core.base.dao.ICoreDao;
 import com.myLife.core.base.service.impl.CoreServiceImpl;
 
+@Service
 public class MenuTypeServiceImpl extends CoreServiceImpl<MenuType, Integer> implements IMenuTypeService{
 	
 	@Autowired
