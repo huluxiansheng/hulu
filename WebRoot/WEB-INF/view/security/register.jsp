@@ -14,32 +14,32 @@
 			<form action="${ctx}/registUser.life" class="form-horizontal" method="post">
 				<div>
 					<div class="form-group">
-						<label class="col-sm-1 control-label">用户账号</label>
-						<div class="col-sm-3">
+						<label class="col-sm-4 control-label">用户账号</label>
+						<div class="col-sm-4">
 							<input type="text" name="userName" class="form-control">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-1 control-label">密码</label>
-						<div class="col-sm-3">
-							<input type="password" name="userPassword" class="form-control">
+						<label class="col-sm-4 control-label">密码</label>
+						<div class="col-sm-4">
+							<input type="password" name="userPass" class="form-control">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-1 control-label">确认密码</label>
-						<div class="col-sm-3">
+						<label class="col-sm-4 control-label">确认密码</label>
+						<div class="col-sm-4">
 							<input type="password" name="userPassword2" class="form-control" >
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-1 control-label">邮箱地址</label>
-						<div class="col-sm-3">
+						<label class="col-sm-4 control-label">邮箱地址</label>
+						<div class="col-sm-4">
 							<input type="text" name="userEmail" class="form-control">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-1 control-label">验证码</label>
-						<div class="col-sm-3">
+						<label class="col-sm-4 control-label">验证码</label>
+						<div class="col-sm-4">
 							<div class="input-group">
 								<input type="text" name="verifictionCode" class="form-control">
 								<span class="input-group-btn">
@@ -49,20 +49,16 @@
 						</div>
 					</div>
 				</div>
-				<div>
-					<div class="form-group">
+				<div class="form-group">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-1">
 						<button type="submit" class="btn btn-default" id="regBtn">注册</button>
+					</div>
+					<div class="col-sm-3">
+						<button type="button" class="btn btn-default" id="reset">取消</button>
 					</div>
 				</div>
 			</form>
-			<button class="btn btn-default" id="queryList">查询列表</button>
-			<button class="btn btn-default" id="queryList1">查询列表-) session</button>
-			<button class="btn btn-default" id="queryList2">查询列表(- seesion</button>
-			<input type="text" name="test" id="test"/>
-			<br/>
-			<%=request.getSession().getId() %>
-			<%=request.getSession().getMaxInactiveInterval() %>
-			<%=request.getSession().getLastAccessedTime() %>
 			<table id="table">
 				
 			</table>

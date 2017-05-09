@@ -3,6 +3,7 @@
  */
 package com.myLife.system.security.controller;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,6 +66,7 @@ public class RegisterController {
 	public @ResponseBody ModelAndView addUser(User user,String verifictionCode, HttpServletRequest request){
 		Map<String, Object> map = new HashMap<String, Object>();
 		String message = null;
+		user.setCreateTime(new Date());;
 		message = registService.addUser(user, verifictionCode, request);
 		map.put("message", message);
 		return new ModelAndView("security/registSuccess",map);		

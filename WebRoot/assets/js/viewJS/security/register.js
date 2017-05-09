@@ -83,22 +83,6 @@ $(function(){
 
 });
 
-$(function(){
-	$("#queryList1").click(function(){
-		$.post(contextPath+'/putSession.life',{"test":$("#test").val()},function(date){
-			alert(date.testSession);
-		});
-	});
-});
-$(function(){
-	$("#queryList2").click(function(){
-		$.post(contextPath+'/getSession.life',function(date){
-			alert(date.testSession);
-		});
-	});
-});
-
-
 
 
 

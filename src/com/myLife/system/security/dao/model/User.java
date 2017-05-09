@@ -1,6 +1,8 @@
 package com.myLife.system.security.dao.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 /**
  * 用户实体
  * @author HuYang 
@@ -39,7 +41,8 @@ public class User {
 	/**
 	 * 用户创建时间
 	 */
-	private Timestamp createTime;
+	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+	private Date createTime;
 	
 	/**
 	 * 获取用户ID
@@ -187,7 +190,7 @@ public class User {
 	 * @author HuYang
 	 * @date 2016年11月8日 下午3:18:10
 	 */
-	public Timestamp getCreateTime() {
+	public Date getCreateTime() {
 		return createTime;
 	}
 	
@@ -197,7 +200,7 @@ public class User {
 	 * @author HuYang
 	 * @date 2016年11月8日 下午3:18:23
 	 */
-	public void setCreateTime(Timestamp createTime) {
+	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
 	
