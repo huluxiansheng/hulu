@@ -7,7 +7,7 @@ $(function(){
 	$('.selectpicker').selectpicker({
 		style: "btn-default",
 		size: 4,
-		width: 100
+		width: 80
 	});
 });
 
